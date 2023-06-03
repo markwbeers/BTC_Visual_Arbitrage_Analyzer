@@ -1,4 +1,3 @@
-
 # Module 3 Challenge - Crypto Arbitrage
 
 ##Apply the three phases of financial analysis to determine if any arbitrage opportunities exist for Bitcoin on the BTSP and COIN exchanges.
@@ -26,8 +25,8 @@ In order to ensure plot visualals remain intact for any viewer, the code referen
 ## Libraries and Packages:
 
 + *'[pandas](https://pandas.pydata.org/)'* (used for data manipulation and analysis)
-+ pathlib: *'Path'* which is a class included as part of the 'pathlib' module in Python's standard library is needed to import data with the "read_csv" command.
-+ %matplotlib inline (uses for data visualizations; displays plots inline with code instead of writing to another file or other output option)
++ [pathlib](https://docs.python.org/3/library/pathlib.html): *'Path'* which is a class included as part of the 'pathlib' module in Python's standard library is needed to import data with the "read_csv" command.
++ [%matplotlib inline](https://pypi.org/project/matplotlib-inline/) (uses for data visualizations; displays plots inline with code instead of writing to another file or other output option)
 
 ## Collect the data:
 
@@ -105,7 +104,6 @@ if do not have, use pip install.
             pip install matplotlib
 
 ---
-
 ## Usage
 
 1) navigate to my github repo called "3_crypto_arbitrage_BTC_BTSP_COIN" and activate your 'dev' environment for python 3.7
@@ -114,14 +112,34 @@ if do not have, use pip install.
 4) type **`jupyter lab 3_crypto_arbitrage_BTC_BTSP_COIN`** at the prompt in your terminal or gitbash prompt $ 
 5) you may open the .csv files to check out in the "Resources" subfolder
 
-
 Finally, run the code from *Jupyter Notebook* in your browser.
+
 ### Coding Style - DRY and versatile - Hope the VP can code in python!! 
 
-    + to change dates for analysis, select the end tag of a dataframe carrying the date, highlight the **'MMDD'** with the cursor.
-    + hold `Ctrl-F` and then choose `Replace all` to swap in a different date from Q1 2018 to experiment with the data, it should fully update all relevant data frames and effectively allow for fast recoded manipulation of data.
-    + variables have also been shortened so the many manipulated DataFrames can be tracked and rewritten quickly to modify code.
-    + With the 3 day date window **EXTRA** section at the end of the notebook, a different range can quckly be sliced up for multiple date runs.
++ to change dates for analysis, select the end tag of a dataframe carrying the date, highlight the **'MMDD'** with the cursor.
++ hold `Ctrl-F` and then choose `Replace` to swap in a different date from Q1 2018 to experiment with the data, it should fully update all relevant data frames and effectively allow for fast recoded manipulation of data.
++ variables have also been shortened so the many manipulated DataFrames can be tracked and rewritten quickly to modify code.
++ With the 3 day date window **EXTRA** section at the end of the notebook, a different range can quckly be sliced up for multiple date runs.
+    
+## Additional Notes/Suggestions to VP for manipulating code and use of formulas to calculate desired arbitrage points and BTC source for purchase.
+       + most trade dates are not clear winners/losers to purchase only from one exchange and sell to the other exclusively.  
+       + many dates will likely show a 'mean' close to zero and one sided buying or selling on a given day is not a good daily strategy.
+       + data frames needed to manipulate and flip exchanges to rework visualizations are easily flipped.
+       + try using Find/Replace on "COIN" and "BTSP" to toggle where seems appropiate use method `Ctrl-F` and then choose `Replace`
+       + review specific notes below prior to any code manipulation
+       
+### "rule of thumb" ways to understand and manipulate formulas
+
+**swap out "_coin" for "_btsp" or vice versa when manipulating data** 
+since the x-axis on the visualization is also the "Timestamp" index - look for patterns to see if advantages to trading only near opening and/or closing.
+
+**'creating arbitrage DataFrames'**
+subtract the lower-priced exchange from the higher-priced one to find our *arbitrage spread* for any given date or range of dates.
+
+**'calculate spread returns' - Step #4 / Part 2**
+      "divide the instances that have a positive arbitrage spread (that is, a spread greater than zero) ... from the exchange you’re buying on ... the lower-priced exchange)"
+**'calculate potential profit'- Step #4 / Part 5**
+      "multiply the spread returns that were greater than 1% by the cost of what was purchased"
 
 ---
 
