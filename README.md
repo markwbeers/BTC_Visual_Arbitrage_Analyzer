@@ -37,10 +37,10 @@ pd.read_csv() - Used to read data from a CSV file and create a DataFrame.
 + **dropna()** - Used to drop rows or columns containing missing values from a DataFrame.
 + **str.replace()** - Used to replace a substring or pattern in a string column with another value.
 + **astype()** - Used to change the data type of a column in a DataFrame or Series.
-+  **isnull()** - Used to check for missing values in a DataFrame or Series and returns a boolean mask indicating which values are missing.
-+  **duplicated()** - Used to identify duplicated rows in a DataFrame and returns a boolean mask indicating which rows are duplicates.
-+  **head()** - Used to return the first n rows of a DataFrame.
-+  **tail()** - Used to return the last n rows of a DataFrame.
++ **isnull()** - Used to check for missing values in a DataFrame or Series and returns a boolean mask indicating which values are missing.
++ **duplicated()** - Used to identify duplicated rows in a DataFrame and returns a boolean mask indicating which rows are duplicates.
++ **head()** - Used to return the first n rows of a DataFrame.
++ **tail()** - Used to return the last n rows of a DataFrame.
 
 ----
 ## Analyze the data:
@@ -118,8 +118,14 @@ Finally, run the code from *Jupyter Notebook* in your browser.
 
 ### Coding Style - DRY and versatile - Hope the VP can code in python!! 
 
-+ to change dates for analysis, select the end tag of a dataframe carrying the date, highlight the **'MMDD'** with the cursor.
-+ hold `Ctrl-F` and then choose `Replace` to swap in a different date from Q1 2018 to experiment with the data, it should fully update all relevant data frames and effectively allow for fast recoded manipulation of data.
+
++ to change dates for analysis, select the end tag of a dataframe carrying the date, highlight the **"_MMDD"** with the cursor.
++ to swap exchanges for arbitrage use  `Ctrl-F` (find) then click the down carrot to open 'replace' box/field
++ hold `Ctrl-F` and then choose `Replace` to swap in a different date from Q1 2018 to experiment with the data.
++ Use 'Replace all' to fully update all relevant data frames and effectively allow for fast recoded manipulation of data.
+
+*SEE BELOW* 'rules of thumb' for guidelines prior to manipulating code to swap exhange positions in arbitrage or dates for analysis
+
 + variables have also been shortened so the many manipulated DataFrames can be tracked and rewritten quickly to modify code.
 + With the 3 day date window **EXTRA** section at the end of the notebook, a different range can quckly be sliced up for multiple date runs.
     
@@ -130,7 +136,11 @@ Finally, run the code from *Jupyter Notebook* in your browser.
        + try using Find/Replace on "COIN" and "BTSP" to toggle where seems appropiate use method `Ctrl-F` and then choose `Replace`
        + review specific notes below prior to any code manipulation
        
-### "rule of thumb" ways to understand and manipulate formulas
+### "rules of thumb" ways to understand and manipulate formulas
+
+**date changes** to change dates for analysis, select the end tag of a dataframe carrying the date, highlight the **"_MMDD"** with the cursor.
++ hold `Ctrl-F` and then choose `Replace` to swap in a different date from Q1 2018 to experiment with the data.
++ Use 'Replace all' to fully update all relevant data frames and effectively allow for fast recoded manipulation of data.
 
 **swap out "_coin" for "_btsp" or vice versa when manipulating data** 
 since the x-axis on the visualization is also the "Timestamp" index - look for patterns to see if advantages to trading only near opening and/or closing.
