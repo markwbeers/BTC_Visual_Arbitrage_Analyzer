@@ -1,20 +1,20 @@
 # Module 3 Challenge - Crypto Arbitrage
 
-##Apply the three phases of financial analysis to determine if any arbitrage opportunities exist for Bitcoin on the BTSP and COIN exchanges.
 
 ## Bitcoin Arbitrage and 'day trading' the firms holdings - **report to VP of Currency Trading at UCB FinTech Investors Fund**
 
 + Bitcoin is a volatile currency and long term holdings without active hedging strategy is far too risky for our firm's assets.
-+ [Bitcoin Fell 50% in the 1st Quarter of 2018](https://totalbitcoin.org/q1-2018-btc-fell-50-percent/)
++ [Bitcoin Fell 50% in the 1st Quarter of 2018](https://totalbitcoin.org/q1-2018-btc-fell-50-percent/) <-- drops like this well hedged, can also be very profitable, however, we would need to implement more advanced derivative based hedging strategies to manage associated risk and that will increase the 'cost of trading' well above 1% and needs to be determined before reworking visualization plots and spreads.
 + Based on researching arbitrage opportunities in several exchanges, we chose [**Bitstamp**](https://www.bitstamp.net/) and [**Coinbase**](https://www.coinbase.com/) as dependable and competent exchanges.
 + Trading costs of 1% are reasonable and exchange imbalances arise in particular volatile trading runs and open opportunities to profit.
 + Our analysis of 3 specific dates and one 3 day window indicate large potential for scalping different exchange imbalances.
 + Timing trades is key to success and we are researching what events and other national news, Fed reports, world events, etc. may have coincided with the arbitrage opportunities found in Q1 of 2018.  
 + We recommend the firm continues this research and to analyze more external data on a timeline as well as potential [**other exchanges for BTC**](https://bitcoin.org/en/exchanges)
 
-Collect CSV data in a Jupyter notebook file.
-Prepare the datasets for analysis by cleaning missing and erroneous data.
-Analyze the data at a high level through summary statistics and visualizations, and use this information to select areas for deeper analysis. Specifically, you’ll select time periods in which to identify arbitrage opportunities.
+## Apply the three phases of financial analysis to determine if any arbitrage opportunities exist for Bitcoin on the BTSP and COIN exchanges.
+1) **Collect** CSV data in a Jupyter notebook file.
+2) **Prepare** the datasets for analysis by cleaning missing and erroneous data.
+3) **Analyze** the data at a high level through summary statistics and visualizations, and use this information to select areas for deeper analysis. Specifically, you’ll select time periods in which to identify arbitrage opportunities.
 
 ## Technologies
 
@@ -34,21 +34,23 @@ pd.read_csv() - Used to read data from a CSV file and create a DataFrame.
 
 ## Prepare the data:
 
-        **dropna()** - Used to drop rows or columns containing missing values from a DataFrame.
-        **str.replace()** - Used to replace a substring or pattern in a string column with another value.
-        **astype()** - Used to change the data type of a column in a DataFrame or Series.
-        **isnull()** - Used to check for missing values in a DataFrame or Series and returns a boolean mask indicating which values are missing.
-        **duplicated()** - Used to identify duplicated rows in a DataFrame and returns a boolean mask indicating which rows are duplicates.
-        **head()** - Used to return the first n rows of a DataFrame.
-        **tail()** - Used to return the last n rows of a DataFrame.
++ **dropna()** - Used to drop rows or columns containing missing values from a DataFrame.
++ **str.replace()** - Used to replace a substring or pattern in a string column with another value.
++ **astype()** - Used to change the data type of a column in a DataFrame or Series.
++  **isnull()** - Used to check for missing values in a DataFrame or Series and returns a boolean mask indicating which values are missing.
++  **duplicated()** - Used to identify duplicated rows in a DataFrame and returns a boolean mask indicating which rows are duplicates.
++  **head()** - Used to return the first n rows of a DataFrame.
++  **tail()** - Used to return the last n rows of a DataFrame.
 
+----
 ## Analyze the data:
 
-plot() - Used to create various types of plots, such as box plots and line plots.
-sum() - Used to calculate the sum of elements in a DataFrame or Series.
-cumsum() - Used to calculate the cumulative sum of elements in a DataFrame or Series.
++ **plot()** - Used to create various types of plots, such as box plots and line plots.
++ **sum()** - Used to calculate the sum of elements in a DataFrame or Series.
++ **cumsum()** - Used to calculate the cumulative sum of elements in a DataFrame or Series.
 
 ---
+
 
 ### Classes/Object Types:
 
