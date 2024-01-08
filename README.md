@@ -1,4 +1,4 @@
-# Module 3 Challenge - Crypto Arbitrage
+# A Python-powered approach to uncover visual Bitcoin arbitrage opportunities using Pandas and Matplotlib
 
 
 ## Bitcoin Arbitrage and 'day trading' the firms holdings - **report to VP of Currency Trading at UCB FinTech Investors Fund**
